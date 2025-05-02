@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Travel</title>
+
+    <!-- daisy UI & tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body>
+    <main>
+        <!-- banner section -->
+         <section class="banner-container">
+            <div class="banner-left">
+                <h1 class="title text-center  font-extrabold">Lets Travel</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptate eius maiores temporibus molestias, possimus repudiandae quos unde!</p>
+                <h1 class="text-3xl">Total Budget: <span id="budget">900</span> $</h1>
+            </div>
+         </section>
+         <br>
+
+         <!-- main content area -->
+          <section class="content-area-container flex border justify-between">
+            <div class="left-container">
+                <!-- shajek -->
+                <div>
+                    <h2 class="text-3xl">Shajek</h2>
+                    <h4 class="text-2xl">Cost: <span class="price">300</span> $</h4>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <!-- dhaka -->
+                <div>
+                    <h2 class="text-3xl">Dhaka</h2>
+                    <h4 class="text-2xl">Cost: <span class="price">300</span> $</h4>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <!-- Khulna -->
+                <div>
+                    <h2 class="text-3xl">Khulna</h2>
+                    <h4 class="text-2xl">Cost: <span class="price">500</span> $</h4>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <!-- Coxs Bazar -->
+                <div>
+                    <h2 class="text-3xl">Coxs Bazar</h2>
+                    <h4 class="text-2xl">Cost: <span class="price">500</span> $</h4>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Right side Cart content -->
+            <div>
+                        <h3>Total cost: <span>0</span> $</h3>
+                    <div>
+                        <button class="btn">Bus+100</button>
+                        <button class="btn">Train-200</button>
+                        <button class="btn">Flight+500</button>
+                    </div>
+                        <h1>Grand Total: <span>0</span>$</h1>
+            </div>
+          </section>
+    </main>
+</body>
+</html>
