@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Budget Travel</title>
 
     <!-- daisy UI & tailwind -->
@@ -11,6 +12,13 @@
     
 </head>
 <body>
+    <nav>
+        <div>
+            <h2 id="cart-count" class="text-center text-2xl">0</h2>
+        </div>
+    </nav>
+
+
     <main>
         <!-- banner section -->
          <section class="banner-container">
@@ -29,39 +37,52 @@
                 <div>
                     <h2 class="text-3xl">Shajek</h2>
                     <h4 class="text-2xl">Cost: <span class="price">300</span> $</h4>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn add-btn">Add to Cart</button>
                 </div>
                 <!-- dhaka -->
                 <div>
                     <h2 class="text-3xl">Dhaka</h2>
                     <h4 class="text-2xl">Cost: <span class="price">300</span> $</h4>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn add-btn">Add to Cart</button>
                 </div>
                 <!-- Khulna -->
                 <div>
                     <h2 class="text-3xl">Khulna</h2>
                     <h4 class="text-2xl">Cost: <span class="price">500</span> $</h4>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn add-btn">Add to Cart</button>
                 </div>
                 <!-- Coxs Bazar -->
                 <div>
                     <h2 class="text-3xl">Coxs Bazar</h2>
                     <h4 class="text-2xl">Cost: <span class="price">500</span> $</h4>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn add-btn">Add to Cart</button>
                 </div>
             </div>
 
             <!-- Right side Cart content -->
-            <div>
+            <div id="cart-container" class="cart">
+                <h1 class="text-3xl">Cart</h1>
+                <hr>
+                
+                    <div class="flex flex-row">
+                        <ul id="selected-place-container" class="selected-place-container">
+                        
+                        </ul>
+                    </div>
+                    <div id="calculation-area">
                         <h3>Total cost: <span>0</span> $</h3>
-                    <div>
+                    </div>
+                    <div class="all-cat-btn">
                         <button class="btn">Bus+100</button>
                         <button class="btn">Train-200</button>
                         <button class="btn">Flight+500</button>
                     </div>
-                        <h1>Grand Total: <span>0</span>$</h1>
+                    <br>
+                    <hr>
+                        <h1 class="font-bold"><var>Grand Total: <span>0</span>$</h1></var>
             </div>
           </section>
     </main>
+    <script src="./app.js"></script>
 </body>
 </html>
