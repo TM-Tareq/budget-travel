@@ -19,8 +19,21 @@ for(const btn of allBtn) {
         const p2 = document.createElement('p');
         p2.innerText = price;
 
+        e.target.parentNode.style.backgroundColor = "gray"
+
         li.appendChild(p);
         li.appendChild(p2);
+
+        const budget = document.getElementById('budget').innerText;
+        const convertedBudget = parseInt(budget);
+
+        if(convertedBudget - parseInt(price) < 0) {
+            alert('low budget is harmful');
+            return;
+        }
+
+        document.getElementById('budget').innerText = convertedBudget - parseInt(price);
+
         selectedContainer.appendChild(li);
         li.style.display = 'flex';
 
@@ -62,13 +75,19 @@ function totalCost(id, value) {
     setInnerText(id, sum);
 }
 
-function grandTotalCost() {
-    const grandTotal = document.getElementById('grand-total').innerText;
+function grandTotalCost(category) {
+    const grandTotal = document.getElementById('total-cost').innerText;
     const convertedTotalCost = parseInt(grandTotal);
 
-    const sum2 = convertedTotalCost + parseInt(totalCost);
+    if(category === 'bus') {
+        setInnerText('grand-total', convertedTotalCost + 100);
+    } else if(category === 'train') {
+        setInnerText('grand-total', convertedTotalCost - 200);
+    } else {
+        setInnerText('grand-total', convertedTotalCost + 500);
+    }
 
-    setInnerText('grand-total', sum2);
+    // const sum2 = convertedTotalCost + parseInt(value);
 }
 
 
